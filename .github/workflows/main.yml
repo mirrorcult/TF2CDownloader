@@ -11,10 +11,6 @@ jobs:
       - name: Setup environment
         run: |
           pip install zstd rich httpx tqdm pyinstaller python-gettext
-      - name: Do localisations
-        run: |
-          ./GenerateMO.sh
-        shell: bash
       - name: Build Windows
         run: |
           .\CompileWindows
