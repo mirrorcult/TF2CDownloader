@@ -17,7 +17,7 @@ import versions
 def download(url, size):
     free_space_check(size, 'temporary')
 
-    run([vars.ARIA2C_BINARY, '--max-connection-per-server=16', '-UTF2CDownloader2023-05-27', '--allow-piece-length-change=true', '--disable-ipv6=true', '--max-concurrent-downloads=16', '--optimize-concurrent-downloads=true', '--check-certificate=false', '--check-integrity=true', '--auto-file-renaming=false', '--continue=true', '--allow-overwrite=true', '--console-log-level=error', '--summary-interval=0', '--bt-hash-check-seed=false', '--seed-time=0',
+    run([vars.ARIA2C_BINARY, '--max-connection-per-server=16', '-UTF2CDownloader2023-05-27', '--allow-piece-length-change=true', '--disable-ipv6=true', '--max-concurrent-downloads=16', '--optimize-concurrent-downloads=true', '--check-certificate=false', '--check-integrity=true', '--auto-file-renaming=false', '--continue=true', '--allow-overwrite=false', '--console-log-level=error', '--summary-interval=0', '--bt-hash-check-seed=false', '--seed-time=0',
     '-d' + vars.TEMP_PATH, url], check=True)
 
 
